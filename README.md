@@ -23,4 +23,12 @@
 
 ## ⚙️도메인 설계
 
+![Entity Relationship Diagram for Enrollment System](https://github.com/user-attachments/assets/c33a11b3-9cb8-4aca-bd27-11110ef31a95)
 
+
+
+## 🔎 추가로 공부해서 적용시킬 것 목록
+1. 로그인 시 보안, 스프링 시큐리티 공부(비밀번호 해쉬, 세션 등등)
+2. 미들웨어
+3. 데이터베이스 테이블 여러가지 활용하는 법(NoSQL)
+4. 프론트엔드, 그리고 프론트에서 백엔드 정보 가져와서 풀스택으로 개발하지 않고 서버 분리해서 작동시키는 법
