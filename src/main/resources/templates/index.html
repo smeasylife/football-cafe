@@ -1,57 +1,20 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: header}">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arsenal Football Blog</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="arsenal-logo.png" alt="Arsenal Logo">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#">구단 소개</a></li>
-            <li><a href="#">구단 소속진</a></li>
-            <li><a href="#">경기 일정</a></li>
-            <li><a href="#">구단 뉴스</a></li>
-            <li><a href="#">자유 게시판</a></li>
-            <li><a href="#">광고 문의</a></li>
-        </ul>
-    </nav>
+<header th:replace="~{fragments/bodyheader :: bodyHeader}">
+    BodyHeader
 </header>
 
 <main>
-    <div class="post">
-        <img src="futsal-field.jpg" alt="Futsal Field">
-        <div class="post-text">
-            <h2>[광고] 풋살 좋아하시나요?</h2>
-            <p>풋살장이 있는 풀빌라에서 묵어보세요! 오픈 할인 진행중입니다.</p>
-            <p>안산 대부도에 있는 풋살장 첨부 풀빌라 입니다...</p>
-        </div>
-    </div>
 
-    <div class="post">
-        <img src="football-equipment.jpg" alt="Football Equipment">
-        <div class="post-text">
-            <h2>[광고] 축구 용품을 구매하실 건가요?</h2>
-            <p>축구에 바나나 온라인 쇼핑몰을 이용해보세요!!</p>
-        </div>
-    </div>
-
-    <div class="post">
-        <img src="player-news.jpg" alt="Player News">
-        <div class="post-text">
-            <h2>아스날 팀뉴스: 아스날은 영입 관심이 있는 하토에게...</h2>
-            <p>“아스날과 아약스의 좋은 관계는 아스날에게 좋은 점이 있다...</p>
-        </div>
-    </div>
 </main>
 
-<footer>
-    <p>&copy; 2024 Arsenal Football Blog</p>
+<footer th:replace="~{fragments/footer :: footer}">
+    footer
 </footer>
 </body>
 </html>

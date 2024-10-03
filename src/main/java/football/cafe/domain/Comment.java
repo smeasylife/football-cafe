@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 @Getter
 public class Comment {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "comment_id")
     private Long id;
 
@@ -24,4 +24,8 @@ public class Comment {
     @ManyToOne
     @JoinColumn(name = "post_id")
     private Post post;
+
+    public void updateContent(String content) {
+        this.content = content;
+    }
 }

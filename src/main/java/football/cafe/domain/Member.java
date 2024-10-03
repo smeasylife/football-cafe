@@ -2,7 +2,6 @@ package football.cafe.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +9,7 @@ import java.util.List;
 @Entity
 @Getter
 public class Member {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
     private Long id;
 
@@ -18,6 +17,8 @@ public class Member {
 
     @OneToMany(mappedBy = "writer")
     private List<Post> posts = new ArrayList<>();
+
+    private String email;
 
     private String password;
 
@@ -29,4 +30,10 @@ public class Member {
 
     @OneToMany(mappedBy = "writer")
     private List<Answer> answers = new ArrayList<>();
+
+    public void signUp(String name, String email, String password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
 }
